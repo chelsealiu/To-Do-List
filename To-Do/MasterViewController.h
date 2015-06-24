@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddNewDelegate.h"
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <AddNewDelegate>
+
+@property NSMutableArray *objects; //cells in the tableView
+
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeToMarkComplete;
 
 
 @end

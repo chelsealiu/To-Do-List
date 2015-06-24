@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomTableView.h"
 
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *taskTitleDetail;
+@property (weak, nonatomic) IBOutlet UILabel *taskSpecsDetail;
+@property (weak, nonatomic) IBOutlet UILabel *taskCompletionDetail;
+
+@property (strong, nonatomic) CustomTableView *customView;
+
+
 
 @end
 

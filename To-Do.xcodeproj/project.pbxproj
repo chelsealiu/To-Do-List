@@ -15,6 +15,10 @@
 		5EC35BC51B3AE0570078BC64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC35BC41B3AE0570078BC64 /* Images.xcassets */; };
 		5EC35BC81B3AE0570078BC64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC35BC61B3AE0570078BC64 /* LaunchScreen.xib */; };
 		5EC35BD41B3AE0570078BC64 /* To_DoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC35BD31B3AE0570078BC64 /* To_DoTests.m */; };
+		5EC35BDF1B3AE0AC0078BC64 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC35BDE1B3AE0AC0078BC64 /* ToDo.m */; };
+		5ECFC0451B3B041C00138390 /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFC0441B3B041C00138390 /* CustomTableView.m */; };
+		5ECFC0471B3B12D800138390 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFC0461B3B12D800138390 /* grid.png */; };
+		5ECFC07F1B3B41B800138390 /* AddNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFC07E1B3B41B800138390 /* AddNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,14 @@
 		5EC35BCD1B3AE0570078BC64 /* To-DoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-DoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC35BD21B3AE0570078BC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EC35BD31B3AE0570078BC64 /* To_DoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = To_DoTests.m; sourceTree = "<group>"; };
+		5EC35BDD1B3AE0AC0078BC64 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		5EC35BDE1B3AE0AC0078BC64 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		5ECFC0431B3B041C00138390 /* CustomTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableView.h; sourceTree = "<group>"; };
+		5ECFC0441B3B041C00138390 /* CustomTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableView.m; sourceTree = "<group>"; };
+		5ECFC0461B3B12D800138390 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
+		5ECFC07D1B3B41B800138390 /* AddNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewViewController.h; sourceTree = "<group>"; };
+		5ECFC07E1B3B41B800138390 /* AddNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewViewController.m; sourceTree = "<group>"; };
+		5ECFC0801B3B510E00138390 /* AddNewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +98,20 @@
 			children = (
 				5EC35BB81B3AE0570078BC64 /* AppDelegate.h */,
 				5EC35BB91B3AE0570078BC64 /* AppDelegate.m */,
+				5EC35BDD1B3AE0AC0078BC64 /* ToDo.h */,
+				5EC35BDE1B3AE0AC0078BC64 /* ToDo.m */,
 				5EC35BBB1B3AE0570078BC64 /* MasterViewController.h */,
 				5EC35BBC1B3AE0570078BC64 /* MasterViewController.m */,
+				5ECFC0801B3B510E00138390 /* AddNewDelegate.h */,
+				5ECFC0431B3B041C00138390 /* CustomTableView.h */,
+				5ECFC0441B3B041C00138390 /* CustomTableView.m */,
 				5EC35BBE1B3AE0570078BC64 /* DetailViewController.h */,
 				5EC35BBF1B3AE0570078BC64 /* DetailViewController.m */,
+				5ECFC07D1B3B41B800138390 /* AddNewViewController.h */,
+				5ECFC07E1B3B41B800138390 /* AddNewViewController.m */,
 				5EC35BC11B3AE0570078BC64 /* Main.storyboard */,
 				5EC35BC41B3AE0570078BC64 /* Images.xcassets */,
+				5ECFC0461B3B12D800138390 /* grid.png */,
 				5EC35BC61B3AE0570078BC64 /* LaunchScreen.xib */,
 				5EC35BB41B3AE0570078BC64 /* Supporting Files */,
 			);
@@ -205,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC35BC31B3AE0570078BC64 /* Main.storyboard in Resources */,
+				5ECFC0471B3B12D800138390 /* grid.png in Resources */,
 				5EC35BC81B3AE0570078BC64 /* LaunchScreen.xib in Resources */,
 				5EC35BC51B3AE0570078BC64 /* Images.xcassets in Resources */,
 			);
@@ -224,8 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC35BDF1B3AE0AC0078BC64 /* ToDo.m in Sources */,
 				5EC35BBA1B3AE0570078BC64 /* AppDelegate.m in Sources */,
+				5ECFC0451B3B041C00138390 /* CustomTableView.m in Sources */,
 				5EC35BBD1B3AE0570078BC64 /* MasterViewController.m in Sources */,
+				5ECFC07F1B3B41B800138390 /* AddNewViewController.m in Sources */,
 				5EC35BB71B3AE0570078BC64 /* main.m in Sources */,
 				5EC35BC01B3AE0570078BC64 /* DetailViewController.m in Sources */,
 			);
@@ -422,6 +446,7 @@
 				5EC35BD91B3AE0570078BC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EC35BDA1B3AE0570078BC64 /* Build configuration list for PBXNativeTarget "To-DoTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +455,7 @@
 				5EC35BDC1B3AE0570078BC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
