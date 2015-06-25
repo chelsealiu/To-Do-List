@@ -37,8 +37,11 @@
         
         if (item.isCompleted == YES) {
             self.taskCompletionDetail.text = @"Completed!";
+            self.taskCompletionDetail.backgroundColor = [UIColor greenColor];
         } else {
-            self.taskCompletionDetail.text = @"Not completed.";
+            self.taskCompletionDetail.text = @"Not completed";
+            self.taskCompletionDetail.backgroundColor = [UIColor redColor];
+
         }
     }
 }

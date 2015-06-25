@@ -226,37 +226,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Task Title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-ke-RA9">
-                                <rect key="frame" x="55" y="139" width="210.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Task Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2p-d6-Wtv">
+                                <rect key="frame" x="37" y="274" width="246" height="55.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="(Completed?)" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-mk-VDg">
+                                <rect key="frame" x="93" y="76" width="134.5" height="20.5"/>
+                                <color key="backgroundColor" red="0.30196079611778259" green="0.90980398654937744" blue="0.51764708757400513" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" red="0.099069649290000006" green="0.13705554519999999" blue="0.15090356690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Task Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-ke-RA9">
+                                <rect key="frame" x="55" y="154" width="210.5" height="44.5"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.34880050509999999" green="0.34880050509999999" blue="0.34880050509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Task Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2p-d6-Wtv">
-                                <rect key="frame" x="76" y="274" width="173" height="55.5"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(Completed?)" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ond-mk-VDg">
-                                <rect key="frame" x="93" y="490" width="134.5" height="20.5"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.099069649294059772" green="0.13705554515199753" blue="0.15090356691919193" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="O2p-d6-Wtv" firstAttribute="top" secondItem="cZC-ke-RA9" secondAttribute="bottom" constant="105" id="4KH-Dy-y9I"/>
+                            <constraint firstItem="O2p-d6-Wtv" firstAttribute="leading" secondItem="cZC-ke-RA9" secondAttribute="trailing" constant="-225.5" id="3gs-Cd-be2"/>
                             <constraint firstAttribute="centerX" secondItem="cZC-ke-RA9" secondAttribute="centerX" id="6Te-QR-91V"/>
-                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="Ond-mk-VDg" secondAttribute="bottom" constant="57" id="SA6-MK-06g"/>
-                            <constraint firstAttribute="centerX" secondItem="Ond-mk-VDg" secondAttribute="centerX" id="bv5-iy-QGt"/>
+                            <constraint firstItem="cZC-ke-RA9" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="39" id="AwE-I5-1Ny"/>
+                            <constraint firstAttribute="centerX" secondItem="Ond-mk-VDg" secondAttribute="centerX" id="KxI-Ea-McM"/>
+                            <constraint firstItem="cZC-ke-RA9" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="90" id="MiP-Cm-IeR"/>
                             <constraint firstAttribute="centerX" secondItem="O2p-d6-Wtv" secondAttribute="centerX" id="dmX-MT-vCc"/>
                             <constraint firstAttribute="centerY" secondItem="O2p-d6-Wtv" secondAttribute="centerY" id="h7S-1L-rsT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cZC-ke-RA9" secondAttribute="trailing" constant="38.5" id="qTy-kq-cGp"/>
+                            <constraint firstItem="O2p-d6-Wtv" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="24" id="qfu-OQ-3Mc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O2p-d6-Wtv" secondAttribute="trailing" constant="18" id="yUD-Qy-dld"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cra-N8-TIN"/>
