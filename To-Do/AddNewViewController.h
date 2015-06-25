@@ -14,15 +14,14 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *insertTitleTextfield;
 
-@property (weak, nonatomic) IBOutlet UITextField *insertPriorityTextfield;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *urgencyControl;
 
 @property (weak, nonatomic) IBOutlet UITextView *insertDescriptTextfield;
 
 @property (assign, nonatomic) id <AddNewDelegate> delegate;
 
+@property (strong, nonatomic) NSString *priorityNumberLabel; 
 
 - (void) modifyArrayInMaster;
-
-
 
 @end

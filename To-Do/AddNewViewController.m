@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
+    self.priorityNumberLabel = @"(Low)";
+    //low urgency by default; will only change if clicked on another segment
     
 }
 
@@ -31,36 +31,39 @@
 }
 
 
-- (void) modifyArrayInMaster {
-    
-    ToDo *toDo = [[ToDo alloc] init];
-    toDo.titleX = self.insertTitleTextfield.text;
-    toDo.taskDescription = self.insertDescriptTextfield.text;
-    toDo.priorityNumber = self.insertPriorityTextfield.text;
-    [self.delegate addToArray:toDo];
-    
-}
-
 
 - (IBAction)doneButton:(id)sender {
     [self modifyArrayInMaster];
-
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
 
+- (IBAction)urgencySegments:(UISegmentedControl *)sender {
+    
+    NSInteger selectedSegment = sender.selectedSegmentIndex;
+    
+    if (selectedSegment == 2) {
+        self.priorityNumberLabel = @"(High)";
+        
+    } else if (selectedSegment == 1) {
+        self.priorityNumberLabel = @"(Medium)";
+    }
+    else {
+        self.priorityNumberLabel = @"(Low)";
+        
+    }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+- (void) modifyArrayInMaster {
+    
+    ToDo *toDo = [[ToDo alloc] init];
+    toDo.titleX = self.insertTitleTextfield.text;
+    toDo.taskDescription = self.insertDescriptTextfield.text;
+    toDo.priorityNumber = self.priorityNumberLabel;
+    [self.delegate addToArray:toDo];
+    
+}
 
 @end

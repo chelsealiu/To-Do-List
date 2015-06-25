@@ -39,7 +39,7 @@
     [self.objects addObject: groceryToDo];
     groceryToDo.titleX = @"Grocery List";
     groceryToDo.taskDescription = @"Nom nom nom nom nom";
-    groceryToDo.priorityNumber = @"(1)";
+    groceryToDo.priorityNumber = @"(Medium)";
     groceryToDo.isCompleted = NO;
 
     
@@ -47,7 +47,7 @@
     [self.objects addObject: lighthouseToDo];
     lighthouseToDo.titleX = @"Lighthouse To-Do";
     lighthouseToDo.taskDescription = @"All the assignments I still haven't finished :(";
-    lighthouseToDo.priorityNumber = @"(2)";
+    lighthouseToDo.priorityNumber = @"(High)";
     lighthouseToDo.isCompleted = NO;
 
     
@@ -55,14 +55,14 @@
     [self.objects addObject: homeToDo];
     homeToDo.titleX = @"Home To-Do";
     homeToDo.taskDescription = @"Things to do at home.";
-    homeToDo.priorityNumber = @"(3)";
+    homeToDo.priorityNumber = @"(Low)";
     homeToDo.isCompleted = NO;
 
     ToDo *lifeToDo = [[ToDo alloc] init];
     [self.objects addObject: lifeToDo];
     lifeToDo.titleX = @"Life Goals";
     lifeToDo.taskDescription = @"Introspection and the meaning of life";
-    lifeToDo.priorityNumber = @"(4)";
+    lifeToDo.priorityNumber = @"(High)";
     lifeToDo.isCompleted = NO;
    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -123,15 +123,13 @@
     ToDo *item = [[ToDo alloc] init];
     NSUInteger index = [indexPath indexAtPosition:[indexPath length] - 1];
     item = self.objects[index];
-    
     self.customCell = [[CustomTableView alloc] init];
     self.customCell = [tableView dequeueReusableCellWithIdentifier:@"TitleCell" forIndexPath:indexPath];
     self.customCell.titleLabel.text = item.titleX;
     self.customCell.descriptLabel.text = item.taskDescription;
     self.customCell.priorityLabel.text = item.priorityNumber;
-    
+
     return self.customCell;
-    
 }
 
 
@@ -168,6 +166,7 @@
     UITableViewCell *swipedCell  = [self.tableView cellForRowAtIndexPath:swipedIndexPath];
 
     ToDo *tempToDo = [self.objects objectAtIndex:swipedIndexPath.row];
+    
     tempToDo.isCompleted = YES;
     
     CustomTableView *tempCell = (CustomTableView *)swipedCell;
@@ -176,6 +175,7 @@
     [[NSAttributedString alloc] initWithString:tempToDo.titleX
                                     attributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)}];
     
+    
     [tempCell.titleLabel setAttributedText:titleString];
     
     NSAttributedString * descriptString =
@@ -183,12 +183,6 @@
                                     attributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)}];
     
     [tempCell.descriptLabel setAttributedText:descriptString];
-    
-    NSAttributedString * priorityString =
-    [[NSAttributedString alloc] initWithString:tempToDo.priorityNumber
-                                    attributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)}];
-    
-    [tempCell.priorityLabel setAttributedText:priorityString];
     
 }
 
