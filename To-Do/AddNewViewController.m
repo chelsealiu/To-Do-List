@@ -44,13 +44,13 @@
     NSInteger selectedSegment = sender.selectedSegmentIndex;
     
     if (selectedSegment == 2) {
-        self.priorityNumberLabel = @"(High)";
+        self.priorityNumberLabel = @"Urgent";
         
     } else if (selectedSegment == 1) {
-        self.priorityNumberLabel = @"(Medium)";
+        self.priorityNumberLabel = @"Somewhat Urgent";
     }
     else {
-        self.priorityNumberLabel = @"(Low)";
+        self.priorityNumberLabel = @"Not Urgent";
         
     }
 

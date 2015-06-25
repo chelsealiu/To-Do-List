@@ -39,7 +39,7 @@
     [self.objects addObject: groceryToDo];
     groceryToDo.titleX = @"Grocery List";
     groceryToDo.taskDescription = @"Nom nom nom nom nom";
-    groceryToDo.priorityNumber = @"(Medium)";
+    groceryToDo.priorityNumber = @"Somewhat Urgent";
     groceryToDo.isCompleted = NO;
 
     
@@ -47,7 +47,7 @@
     [self.objects addObject: lighthouseToDo];
     lighthouseToDo.titleX = @"Lighthouse To-Do";
     lighthouseToDo.taskDescription = @"All the assignments I still haven't finished :(";
-    lighthouseToDo.priorityNumber = @"(High)";
+    lighthouseToDo.priorityNumber = @"Urgent";
     lighthouseToDo.isCompleted = NO;
 
     
@@ -55,14 +55,14 @@
     [self.objects addObject: homeToDo];
     homeToDo.titleX = @"Home To-Do";
     homeToDo.taskDescription = @"Things to do at home.";
-    homeToDo.priorityNumber = @"(Low)";
+    homeToDo.priorityNumber = @"Not Urgent";
     homeToDo.isCompleted = NO;
 
     ToDo *lifeToDo = [[ToDo alloc] init];
     [self.objects addObject: lifeToDo];
     lifeToDo.titleX = @"Life Goals";
     lifeToDo.taskDescription = @"Introspection and the meaning of life";
-    lifeToDo.priorityNumber = @"(High)";
+    lifeToDo.priorityNumber = @"Urgent";
     lifeToDo.isCompleted = NO;
    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -128,6 +128,14 @@
     self.customCell.titleLabel.text = item.titleX;
     self.customCell.descriptLabel.text = item.taskDescription;
     self.customCell.priorityLabel.text = item.priorityNumber;
+    
+    if ([item.priorityNumber isEqualToString: @"Urgent"]) {
+        self.customCell.priorityLabel.textColor = [UIColor redColor];
+    } else if ([item.priorityNumber isEqualToString:@"Somewhat Urgent"]) {
+        self.customCell.priorityLabel.textColor = [UIColor orangeColor];
+    } else {
+        self.customCell.priorityLabel.textColor = [UIColor brownColor];
+    }
 
     return self.customCell;
 }
